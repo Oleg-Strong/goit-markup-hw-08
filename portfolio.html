@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Портфолио</title>
+  </head>
+
+  <body>
+    <!--секция "Хэдер"-->
+    <header class="header">
+      <div class="container header__box">
+        <nav class="header__nav">
+          <a class="logo" href="./index.html" lang="en"
+            >Web<span class="logo__text--black">Studio</span></a
+          >
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link" href="./index.html">Студия</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link active" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#contacts">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="contacts">
+          <li class="contacts__item">
+            <a class="contacts__link" href="mailto:info@devstudio.com"
+              ><svg class="contacts__icon" width="16px" height="12px">
+                <use href="./imagis/icons/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link" href="tel:+380961111111"
+              ><svg class="contacts__icon" width="10px" height="16px">
+                <use href="./imagis/icons/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+        <button class="menu-btn__open" data-menu-open type="button">
+          <svg class="menu-btn__open-icon" width="24px" height="16px">
+            <use href="./imagis/icons/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+      </div>
+      <!--Мобильное меню-->
+
+      <div class="mob-menu__box is-hidden" data-menu>
+        <button class="menu-btn__close" data-menu-close type="button">
+          <svg class="menu-btn__close-icon" width="19px" height="19px">
+            <use href="./imagis/icons/icons.svg#icon-close-menu"></use>
+          </svg>
+        </button>
+        <ul class="mob-menu">
+          <li class="mob-menu__item">
+            <a class="mob-menu__link" href="./index.html">Студия</a>
+          </li>
+          <li class="mob-menu__item">
+            <a class="mob-menu__link active" href="./portfolio.html"
+              >Портфолио</a
+            >
+          </li>
+          <li class="mob-menu__item">
+            <a class="mob-menu__link" href="#contacts">Контакты</a>
+          </li>
+        </ul>
+
+        <ul class="mob-contacts">
+          <li class="mob-contacts__item">
+            <a class="mob-contacts__link--tel" href="tel:+380961111111">
+              +38 096 111 11 11
+            </a>
+          </li>
+          <li class="mob-contacts__item">
+            <a
+              class="mob-contacts__link--mail"
+              href="mailto:info@devstudio.com"
+            >
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mob-socials">
+          <li class="mob-socials__item">
+            <a
+              class="mob-socials__link"
+              href="https://www.instagram.com/"
+              target="blank"
+              rel="noopener noreferrer"
+              aria-label="инстаграм"
+              lang="en"
+              >Instagram</a
+            >
+          </li>
+          <li class="mob-socials__item">
+            <a
+              class="mob-socials__link"
+              href="https://twitter.com/"
+              target="blank"
+              rel="noopener noreferrer"
+              aria-label="твитер"
+              lang="en"
+              >Twitter</a
+            >
+          </li>
+          <li class="mob-socials__item">
+            <a
+              class="mob-socials__link"
+              href="https://www.facebook.com/"
+              target="blank"
+              rel="noopener noreferrer"
+              aria-label="фейсбук"
+              lang="en"
+              >Facebook</a
+            >
+          </li>
+          <li class="mob-socials__item">
+            <a
+              class="mob-socials__link"
+              href="https://ua.linkedin.com/"
+              target="blank"
+              rel="noopener noreferrer"
+              aria-label="ликедин"
+              lang="en"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!--секция "Навигационных кнопок"-->
+    <section class="section projects">
+      <h1 class="projects__title visually-hidden">Проекты компании</h1>
+      <div class="container filters">
+        <ul class="filters__list">
+          <li class="filters__item">
+            <button class="filters__button" type="button">Все</button>
+          </li>
+          <li class="filters__item">
+            <button class="filters__button" type="button">Веб-сайты</button>
+          </li>
+          <li class="filters__item">
+            <button class="filters__button" type="button">Приложения</button>
+          </li>
+          <li class="filters__item">
+            <button class="filters__button" type="button">Дизайн</button>
+          </li>
+          <li class="filters__item">
+            <button class="filters__button" type="button">Маркетинг</button>
+          </li>
+        </ul>
+
+        <!--список "Проектами компании"-->
+
+        <ul class="galeri-projects">
+          <li class="galeri-projects__item">
+            <a class="galeri-projects__link" href="#"
+              ><div class="projects__photo-overlay">
+                <img
+                  class="galeri-projects__photo"
+                  srcset="
+                    ./imagis/ouer-work-portfolio/leptop/leptop-354.img.jpg 354w,
+                    ./imagis/ouer-work-portfolio/leptop/leptop-370.img.jpg 370w,
+                    ./imagis/ouer-work-portfolio/leptop/leptop-450.img.jpg 450w,
+                    ./imagis/ouer-work-portfolio/leptop/leptop-708.img.jpg 708w,
+                    ./imagis/ouer-work-portfolio/leptop/leptop-740.img.jpg 740w,
+                    ./imagis/ouer-work-portfolio/leptop/leptop-900.img.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                  src="./imagis/ouer-work-portfolio/leptop/leptop-354.img.jpg"
+                  alt="ноутбук"
+                  width="370"
+                  height="295"
+                />
+                <div class="overlay">
+                  <p class="overlay__text">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-description">
+                <h2 class="project-description__name">Технокряк</h2>
+                <p class="project-description__about">Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="galeri-projects__item">
+            <a class="galeri-projects__link" href="#">
+              <div class="projects__photo-overlay">
+                <img
+                  class="galeri-projects__photo"
+                  srcset="
+                    ./imagis/ouer-work-portfolio/basketballs-players/basketballs-players-354.img.jpg 354w,
+                    ./imagis/ouer-work-portfolio/basketballs-players/basketballs-players-370.img.jpg 370w,
+                    ./imagis/ouer-work-portfolio/basketballs-players/basketballs-players-450.img.jpg 450w,
+                    ./imagis/ouer-work-portfolio/basketballs-players/basketballs-players-708.img.jpg 708w,
+                    ./imagis/ouer-work-portfolio/basketballs-players/basketballs-players-740.img.jpg 740w,
+                    ./imagis/ouer-work-portfolio/basketballs-players/basketballs-players-900.img.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                  src="./imagis/ouer-work-portfolio/basketballs-players/basketballs-players-354.img.jpg"
+                  alt="играки в баскетболл"
+                  width="370"
+                  height="295"
+                />
+                <div class="overlay">
+                  <p class="overlay__text">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-description">
+                <h2 class="project-description__name">
+                  Постер <span lang="en">New Orlean vs Golden Star</span>
+                </h2>
+                <p class="project-description__about">Дизаин</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="galeri-projects__item">
+            <a class="galeri-projects__link" href="#"
+              ><div class="projects__photo-overlay">
+                <img
+                  class="galeri-projects__photo"
+                  srcset="
+                    ./imagis/ouer-work-portfolio/fish-logo/fish-logo-354.img.jpg 354w,
+                    ./imagis/ouer-work-portfolio/fish-logo/fish-logo-370.img.jpg 370w,
+                    ./imagis/ouer-work-portfolio/fish-logo/fish-logo-450.img.jpg 450w,
+                    ./imagis/ouer-work-portfolio/fish-logo/fish-logo-708.img.jpg 708w,
+                    ./imagis/ouer-work-portfolio/fish-logo/fish-logo-740.img.jpg 740w,
+                    ./imagis/ouer-work-portfolio/fish-logo/fish-logo-900.img.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                  src="./imagis/ouer-work-portfolio/fish-logo/fish-logo-354.img.jpg"
+                  alt="рыба на фонге логотипа"
+                  width="370"
+                  height="295"
+                />
+                <div class="overlay">
+                  <p class="overlay__text">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-description">
+                <h2 class="project-description__name">
+                  Ресторан <span lang="en">Seafood</span>
+                </h2>
+                <p class="project-description__about">Приложение</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="galeri-projects__item">
+            <a class="galeri-projects__link" href="#"
+              ><div class="projects__photo-overlay">
+                <img
+                  class="galeri-projects__photo"
+                  srcset="
+                    ./imagis/ouer-work-portfolio/headphones/headphones-354.img.jpg 354w,
+                    ./imagis/ouer-work-portfolio/headphones/headphones-370.img.jpg 370w,
+                    ./imagis/ouer-work-portfolio/headphones/headphones-450.img.jpg 450w,
+                    ./imagis/ouer-work-portfolio/headphones/headphones-708.img.jpg 708w,
+                    ./imagis/ouer-work-portfolio/headphones/headphones-740.img.jpg 740w,
+                    ./imagis/ouer-work-portfolio/headphones/headphones-900.img.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                  src="./imagis/ouer-work-portfolio/headphones/headphones-354.img.jpg"
+                  alt="наушники"
+                  width="370"
+                  height="295"
+                />
+                <div class="overlay">
+                  <p class="overlay__text">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-description">
+                <h2 class="project-description__name">
+                  Проект <span lang="en">Prime</span>
+                </h2>
+                <p class="project-description__about">Маркетингr</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="galeri-projects__item">
+            <a class="galeri-projects__link" href="#"
+              ><div class="projects__photo-overlay">
+                <img
+                  class="galeri-projects__photo"
+                  srcset="
+                    ./imagis/ouer-work-portfolio/boxes/boxses-354.img.jpg 354w,
+                    ./imagis/ouer-work-portfolio/boxes/boxses-370.img.jpg 370w,
+                    ./imagis/ouer-work-portfolio/boxes/boxses-450.img.jpg 450w,
+                    ./imagis/ouer-work-portfolio/boxes/boxses-708.img.jpg 708w,
+                    ./imagis/ouer-work-portfolio/boxes/boxses-740.img.jpg 740w,
+                    ./imagis/ouer-work-portfolio/boxes/boxses-900.img.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                  src="./imagis/ouer-work-portfolio/boxes/boxses-354.img.jpg"
+                  alt="две коробки"
+                  width="370"
+                  height="295"
+                />
+                <div class="overlay">
+                  <p class="overlay__text">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-description">
+                <h2 class="project-description__name">
+                  Проект <span lang="en">Boxes</span>
+                </h2>
+                <p class="project-description__about">Приложение</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="galeri-projects__item">
+            <a class="galeri-projects__link" href="#"
+              ><div class="projects__photo-overlay">
+                <img
+                  class="galeri-projects__photo"
+                  srcset="
+                    ./imagis/ouer-work-portfolio/monitor/monitor-354.img.jpg 354w,
+                    ./imagis/ouer-work-portfolio/monitor/monitor-370.img.jpg 370w,
+                    ./imagis/ouer-work-portfolio/monitor/monitor-450.img.jpg 450w,
+                    ./imagis/ouer-work-portfolio/monitor/monitor-708.img.jpg 708w,
+                    ./imagis/ouer-work-portfolio/monitor/monitor-740.img.jpg 740w,
+                    ./imagis/ouer-work-portfolio/monitor/monitor-900.img.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                  src="./imagis/ouer-work-portfolio/monitor/monitor-354.img.jpg"
+                  alt="манитор"
+                  width="370"
+                  height="295"
+                />
+                <div class="overlay">
+                  <p class="overlay__text">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-description">
+                <h2 class="project-description__name" lang="en">
+                  Inspiration has no Borders
+                </h2>
+                <p class="project-description__about">Веб-сайт</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="galeri-projects__item">
+            <a class="galeri-projects__link" href="#"
+              ><div class="projects__photo-overlay">
+                <img
+                  class="galeri-projects__photo"
+                  srcset="
+                    ./imagis/ouer-work-portfolio/book/book-354.img.jpg 354w,
+                    ./imagis/ouer-work-portfolio/book/book-370.img.jpg 370w,
+                    ./imagis/ouer-work-portfolio/book/book-450.img.jpg 450w,
+                    ./imagis/ouer-work-portfolio/book/book-708.img.jpg 708w,
+                    ./imagis/ouer-work-portfolio/book/book-740.img.jpg 740w,
+                    ./imagis/ouer-work-portfolio/book/book-900.img.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                  src="./imagis/ouer-work-portfolio/book/book-354.img.jpg"
+                  alt="открытая книга"
+                  width="370"
+                  height="295"
+                />
+                <div class="overlay">
+                  <p class="overlay__text">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-description">
+                <h2 class="project-description__name">
+                  Издание <span lang="en">Limited Edition</span>
+                </h2>
+                <p class="project-description__about">Дизайн</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="galeri-projects__item">
+            <a class="galeri-projects__link" href="#"
+              ><div class="projects__photo-overlay">
+                <img
+                  class="galeri-projects__photo"
+                  srcset="
+                    ./imagis/ouer-work-portfolio/tag/tag-354.img.jpg 354w,
+                    ./imagis/ouer-work-portfolio/tag/tag-370.img.jpg 370w,
+                    ./imagis/ouer-work-portfolio/tag/tag-450.img.jpg 450w,
+                    ./imagis/ouer-work-portfolio/tag/tag-708.img.jpg 708w,
+                    ./imagis/ouer-work-portfolio/tag/tag-740.img.jpg 740w,
+                    ./imagis/ouer-work-portfolio/tag/tag-900.img.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                  src="./imagis/ouer-work-portfolio/tag/tag-354.img.jpg"
+                  alt="бирка с логотипом"
+                  width="370"
+                  height="295"
+                />
+                <div class="overlay">
+                  <p class="overlay__text">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-description">
+                <h2 class="project-description__name">
+                  Проект <span lang="en">LAB</span>
+                </h2>
+                <p class="project-description__about">Маркетинг</p>
+              </div>
+            </a>
+          </li>
+
+          <li class="galeri-projects__item">
+            <a class="galeri-projects__link" href="#"
+              ><div class="projects__photo-overlay">
+                <img
+                  class="galeri-projects__photo"
+                  srcset="
+                    ./imagis/ouer-work-portfolio/laptop-hands/laptop-hands-354.img.jpg 354w,
+                    ./imagis/ouer-work-portfolio/laptop-hands/laptop-hands-370.img.jpg 370w,
+                    ./imagis/ouer-work-portfolio/laptop-hands/laptop-hands-450.img.jpg 450w,
+                    ./imagis/ouer-work-portfolio/laptop-hands/laptop-hands-708.img.jpg 708w,
+                    ./imagis/ouer-work-portfolio/laptop-hands/laptop-hands-740.img.jpg 740w,
+                    ./imagis/ouer-work-portfolio/laptop-hands/laptop-hands-900.img.jpg 900w
+                  "
+                  sizes="(min-width: 1200px) 370px, (min-width: 768px) 354px, 100vw"
+                  src="./imagis/ouer-work-portfolio/laptop-hands/laptop-hands-354.img.jpg"
+                  alt="наберает текст"
+                  width="370"
+                  height="295"
+                />
+                <div class="overlay">
+                  <p class="overlay__text">
+                    Ресурс предлагает комплексные предложения с разным уровнем
+                    функционала и сервисов. Все это позволит посетителю получить
+                    исчерпывающие сведения о компании или частном лице.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-description">
+                <h2 class="project-description__name" lang="en">
+                  Growing Business
+                </h2>
+                <p class="project-description__about">Приложение</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!--секция "Футер"-->
+    <footer Class="footer">
+      <div class="container footer__contacts-box">
+        <div class="adress-logo__box">
+          <a class="logo" href="./index.html" lang="en"
+            >Web<span class="logo__text--white">Studio</span></a
+          >
+          <address class="address" id="contacts">
+            <ul class="address__list">
+              <li class="address__item">
+                <a
+                  class="address__link address__link--light-color"
+                  href="https://goo.gl/maps/M4VhNLJZb9ix9Voo7"
+                  target="blank"
+                  rel="noopener noreferrer"
+                  >г. Киев, пр-т Леси Украинки, 26</a
+                >
+              </li>
+              <li class="address__item">
+                <a class="address__link" href="mailto:info@example.com"
+                  >info@example.com</a
+                >
+              </li>
+              <li class="address__item">
+                <a class="address__link" href="tel:+380991111111"
+                  >+38 099 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <!--Иконки соц сетей в "футере"-->
+        <div class="footer__socials-box">
+          <p class="footer__socials-text">присоединяйтесь</p>
+          <ul class="socials">
+            <li class="socials__item">
+              <a
+                class="socials__link socials__link--bg-dark"
+                href="https://www.instagram.com/"
+                target="blank"
+                rel="noopener noreferrer"
+                aria-label="инстаграм"
+              >
+                <svg class="socials__icon" width="20px" height="20px">
+                  <use href="./imagis/icons/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a
+                class="socials__link socials__link--bg-dark"
+                href="https://twitter.com/"
+                target="blank"
+                rel="noopener noreferrer"
+                aria-label="твитер"
+              >
+                <svg class="socials__icon" width="20px" height="20px">
+                  <use href="./imagis/icons/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a
+                class="socials__link socials__link--bg-dark"
+                href="https://www.facebook.com/"
+                target="blank"
+                rel="noopener noreferrer"
+                aria-label="фейсбук"
+              >
+                <svg class="socials__icon" width="20px" height="20px">
+                  <use href="./imagis/icons/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a
+                class="socials__link socials__link--bg-dark"
+                href="https://ua.linkedin.com/"
+                target="blank"
+                rel="noopener noreferrer"
+                aria-label="ликедин"
+              >
+                <svg class="socials__icon" width="20px" height="20px">
+                  <use href="./imagis/icons/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--Форма в "футере"-->
+        <div class="footer__form-box">
+          <p class="footer__form-text">Подпишитесь на рассылку</p>
+          <form class="form-submit">
+            <input
+              class="form-submit__input"
+              type="email"
+              name="email"
+              placeholder="E-mail"
+            />
+            <button class="form-submit__btn" type="submit">
+              Подписаться
+              <span class="form-submit__btn-icon">
+                <svg width="24px" height="24px">
+                  <use href="./imagis/icons/icons.svg#icon-send"></use>
+                </svg>
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/menu.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+/* стили иконок "соц сетей" */
+
+.socials {
+  @extend %list;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  &__link {
+    @extend %link;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 44px;
+    height: 44px;
+
+    color: $light-text-color;
+
+    border-radius: 50%;
+
+    transition: color $cubic, background-color $cubic;
+
+    &--bg-dark {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    &--color-grey {
+      color: #afb1b8;
+    }
+    &:hover,
+    &:focus {
+      color: $light-text-color;
+      background-color: $accent-color;
+    }
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}
