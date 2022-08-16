@@ -46,8 +46,7 @@
     transform: translate(-50%, -50%) scale(1);
   }
   @media screen and (min-width: $desctop) {
-    max-width: 528px;
-    width: 580px;
+    width: 528px;
   }
 
   .is-hidden & {

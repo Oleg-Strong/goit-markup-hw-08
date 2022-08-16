@@ -119,11 +119,16 @@ img {
   background-color: #ffffff;
   z-index: 10;
   opacity: 1;
-  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transform: translatex(0%);
+          transform: translatex(0%);
+  -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.is-hidden {
+.mob-menu__box--is-hidden {
+  -webkit-transform: translatex(-100%);
+          transform: translatex(-100%);
   opacity: 0;
   pointer-events: none;
 }
@@ -1161,8 +1166,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    max-width: 528px;
-    width: 580px;
+    width: 528px;
   }
 }
 .is-hidden .modal {

@@ -12,13 +12,16 @@
   background-color: $primery-bg-color;
   z-index: 10;
   opacity: 1;
-  transition: opacity $cubic;
+  transform: translatex(0%);
+  transition: opacity $cubic, transform $cubic;
+
+  &--is-hidden {
+    transform: translatex(-100%);
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
 .mob-menu {
   @extend %list;
 
