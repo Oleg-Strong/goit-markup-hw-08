@@ -60,7 +60,12 @@
             </a>
           </li>
         </ul>
-        <button class="menu-btn__open" data-menu-open type="button">
+        <button
+          class="menu-btn__open js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          type="button"
+        >
           <svg class="menu-btn__open-icon" width="24px" height="16px">
             <use href="./imagis/icons/icons.svg#icon-menu"></use>
           </svg>
@@ -68,8 +73,8 @@
       </div>
       <!--Мобильное меню-->
 
-      <div class="mob-menu__box mob-menu__box--is-hidden" data-menu>
-        <button class="menu-btn__close" data-menu-close type="button">
+      <div class="mob-menu__box js-menu-container" id="mobile-menu">
+        <button class="menu-btn__close js-close-menu" type="button">
           <svg class="menu-btn__close-icon" width="19px" height="19px">
             <use href="./imagis/icons/icons.svg#icon-close-menu"></use>
           </svg>
